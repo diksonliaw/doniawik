@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DONIAWIK — Video Quality Engine</title>
+<meta name="description" content="DONIAWIK intelligently optimizes gaming videos for clean, smooth social uploads.">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<canvas id="particles"></canvas><div class="noise"></div>
+<header class="nav"><a class="brand" href="#"><span class="brand-mark">D</span><span>DONIAWIK</span></a><nav><a href="#engine">Engine</a><a href="#how">How it works</a><a href="#about">About</a></nav><span class="status-dot"><i></i> LOCAL ENGINE</span></header>
+<main>
+<section class="hero">
+<div class="eyebrow"><span></span> NEXT-GEN VIDEO PROCESSING</div>
+<h1>Make every<br><em>frame</em> hit different.</h1>
+<p class="lead">A smart video quality engine built for creators. Drop your clip in, let DONIAWIK analyze it, and export a clean social-ready master.</p>
+<div class="hero-actions"><a class="primary" href="#engine">Optimize a video <b>↗</b></a><a class="ghost" href="#how">See how it works</a></div>
+<div class="metrics"><div><strong>01</strong><span>Analyze first</span></div><div><strong>02</strong><span>Process locally</span></div><div><strong>03</strong><span>Verify output</span></div></div>
+</section>
+<section id="engine" class="engine-wrap">
+<div class="section-head"><div><div class="kicker">THE ENGINE</div><h2>One drop. <span>One clean export.</span></h2></div><div class="engine-badge">● RTX / CPU AUTO</div></div>
+<div class="engine-card">
+<div id="drop" class="dropzone"><div class="upload-orb">↑</div><h3>Drop your video here</h3><p>or <label for="file">browse files</label></p><small>MP4 · MOV · MKV · WEBM · up to 1 GB</small><input id="file" type="file" accept="video/*"></div>
+<div class="controls"><div class="mode-label">PROCESSING MODE</div><div class="modes"><button class="mode active" data-mode="stable"><span>STABLE</span><small>Recommended · balanced quality</small><b>✓</b></button><button class="mode" data-mode="maximum"><span>MAXIMUM <i>!</i></span><small>Stronger detail · more GPU load</small><b>○</b></button></div><button id="process" class="process" disabled>Choose a video <span>→</span></button></div>
+</div>
+<div id="status" class="status-panel hidden"><div class="status-top"><div><span id="stage">Preparing…</span><small id="details">Your video stays on this computer.</small></div><strong id="pct">0%</strong></div><div class="bar"><i id="bar"></i></div><div class="live"><span>LIVE ENGINE</span><span id="engineText">Waiting</span></div></div>
+<div id="result" class="result hidden"><div><div class="check">✓</div><div><div class="kicker">PROCESS COMPLETE</div><h3>Your master is ready.</h3><p id="resultMeta">Optimized locally.</p></div></div><a id="download" class="download" href="#">Download MP4 <span>↓</span></a></div>
+</section>
+<section id="how" class="how"><div class="section-head"><div><div class="kicker">WHY DONIAWIK</div><h2>Quality without<br><span>the mystery.</span></h2></div></div><div class="cards"><article><div>01</div><h3>Smart analysis</h3><p>We inspect resolution, frame rate, codecs, audio and duration before processing.</p></article><article><div>02</div><h3>Hardware aware</h3><p>NVIDIA NVENC is detected automatically when available, with a CPU fallback.</p></article><article><div>03</div><h3>Clean delivery</h3><p>H.264 video, AAC audio, 48 kHz sound and fast-start MP4 packaging.</p></article></div></section>
+<section id="about" class="about"><div class="about-copy"><div class="kicker">BUILT FOR CREATORS</div><h2>Less wrestling with settings.<br><span>More posting.</span></h2><p>DONIAWIK is designed around a simple idea: the creator should not need an engineering degree to get a clean export. Advanced decisions happen behind the scenes.</p></div><div class="spec-grid"><div><b>H.264</b><span>Social-ready video</span></div><div><b>AAC</b><span>192 kbps · 48 kHz</span></div><div><b>GPU</b><span>Auto acceleration</span></div><div><b>LOCAL</b><span>Your file stays here</span></div></div></section>
+</main><footer><div class="brand"><span class="brand-mark">D</span><span>DONIAWIK</span></div><span>VIDEO QUALITY ENGINE · V2</span></footer>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body></html>
